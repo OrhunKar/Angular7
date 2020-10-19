@@ -1,0 +1,48 @@
+<div class="wrapper">
+    <aside class="aside-container">
+        <div class="aside-inner">
+            <nav class="sidebar data-sidebar-anyclick-close">
+                <ul class="sidebar-nav">
+                    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+                    <li class="nav-heading">
+                        <span data-localize="sidebar.heading.HEADER">Main Navigation</span>
+                    </li>
+                    <li>
+                        <a (click)="navigationToggle('info')">
+                            <i class="fas fa-info"></i>
+                            <span>INFO</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a (click)="navigationToggle('dashboard')">                            
+                            <i class="fas fa-layer-group"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </aside>    
+    <div class="container">
+        <div class="column">
+            <div class="jumbtron" id="dashboard">
+                <h1 class="display-4 text-center">Student Page</h1>
+                <hr>
+                <div class="row">
+                    <div class="col-md-5">
+                        <app-student-enrolled-course-list></app-student-enrolled-course-list>
+                    </div>
+                    <div class="col-md-7">
+                        <app-student-available-course-list></app-student-available-course-list>
+                    </div>
+                </div>
+            </div>
+            <div class="jumbtron" id="info">
+                <h1 class="display-4 text-center">Student Page INFO</h1>
+                <p>On left you can navigate between info page and student page</p>
+                <p>In student page you can see enrolled courses of the student and you can enroll to new available courses</p>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>

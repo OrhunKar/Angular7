@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="jumbtron">
+        <div class="column">
+            <form #form="ngForm" (submit) = "onSubmit()" autocomplete="off">
+                <div class="form-group">
+                    <label>USER NAME</label>
+                    <input name="userName" #userName="ngModel" [(ngModel)] = "formData.name" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>PASSWORD</label>
+                    <input name="" type="password" class="form-control" value="**********">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-lg btn-block">SUBMIT</button>
+                </div>
+            </form>
+            <button type="submit" class="btn btn-lg btn-block">
+                <a class="nav-link" routerLink="/admins" routerLinkActive="active">SUPER SECRET ADMIN PAGE</a>    
+            </button>
+        </div>
+        <p>There are a few users already created by Admin Page in the system.</p>
+        <p>You can try usernames DemoTestStudent for student page or EnglishTestTeacher for teacher page. Password does not matter.</p>
+        <p>By clicking the admin page button you will be navigated to admin page.</p>
+        <p>In admin page there is a left navigation bar but other pages dont have it since they lack content to make use of it.</p>
+    </div>
+</div>
+

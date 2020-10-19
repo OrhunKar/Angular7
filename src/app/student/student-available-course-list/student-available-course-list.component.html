@@ -1,0 +1,7 @@
+<h1 class="display-6 text-center">All Courses</h1>
+<table class="table table-hover">
+    <tr *ngFor ="let course of courseList">
+        <td>[{{course.CID}}]-{{course.Contents}}</td>
+        <td><button (click) = "onEnroll(course.CID)" class="btn-sm btn-outline-success">Enroll</button></td>
+    </tr>
+</table>

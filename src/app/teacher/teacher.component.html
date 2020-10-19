@@ -1,0 +1,49 @@
+<div class="wrapper">
+    <aside class="aside-container">
+        <div class="aside-inner">
+            <nav class="sidebar data-sidebar-anyclick-close">
+                <ul class="sidebar-nav">
+                    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+                    <li class="nav-heading">
+                        <span data-localize="sidebar.heading.HEADER">Main Navigation</span>
+                    </li>
+                    <li>
+                        <a (click)="navigationToggle('info')">
+                            <i class="fas fa-layer-group"></i>
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a (click)="navigationToggle('dashboard')">                            
+                            <i class="fas fa-layer-group"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </aside>    
+    <div class="container">
+        <div class="column">
+            <div class="jumbtron" id="info">
+                <h1 class="display-4 text-center">Teacher Page INFO</h1>
+                <hr>
+                <p>You can navigate between info page and teacher page from left navigation bar</p>
+                <p>On right side you can see courses of this teacher and when you click on them on left side you can view informations about related course</p>
+                <p>You can change the course link after giving input and submitting it</p>
+            </div>
+            <div class="jumbtron" id="dashboard">
+                <h1 class="display-4 text-center">Teacher Page</h1>
+                <hr>
+                <div class="row">
+                    <div class="col-md-5">
+                        <app-teacher-course-detail></app-teacher-course-detail>
+                    </div>
+                    <div class="col-md-7">
+                        <app-teacher-course-list></app-teacher-course-list>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

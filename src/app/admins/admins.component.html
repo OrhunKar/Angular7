@@ -1,0 +1,85 @@
+<div class="wrapper">
+    <aside class="aside-container">
+        <div class="aside-inner">
+            <nav class="sidebar data-sidebar-anyclick-close">
+                <ul class="sidebar-nav">
+                    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+                    <li class="nav-heading">
+                        <span data-localize="sidebar.heading.HEADER">Main Navigation</span>
+                    </li>
+                    <li>
+                        <a (click)="navigationToggle('admin')">
+                            <i class="fas fa-layer-group"></i>
+                            <span>Admin List</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a (click)="navigationToggle('student')">                            
+                            <i class="fas fa-layer-group"></i>
+                            <span>Student List</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a (click)="navigationToggle('teacher')">                            
+                            <i class="fas fa-layer-group"></i>
+                            <span>Teacher List</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a (click)="navigationToggle('course')">                            
+                            <i class="fas fa-layer-group"></i>
+                            <span>Course List</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </aside>   
+    <div class="container">
+        <div class="jumbtron">
+            <div class="column">
+                <div class="jumbtron" id="admin">
+                    <h1 class="display-4 text-center">Admin List</h1>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <app-admin></app-admin>
+                        </div>
+                        <div class="col-md-7">
+                            <app-admin-list></app-admin-list>
+                        </div>
+                    </div>
+                </div>
+                <div class="jumbtron" id="teacher">
+                    <h1 class="display-4 text-center">Teacher List</h1>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <app-teacher-add></app-teacher-add>
+                        </div>
+                        <div class="col-md-7">
+                            <app-teacher-list></app-teacher-list>
+                        </div>
+                    </div>
+                </div>
+                <div class="jumbtron" id="student">
+                    <h1 class="display-4 text-center">Student List</h1>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <app-student-add></app-student-add>
+                        </div>
+                        <div class="col-md-7">
+                            <app-student-list></app-student-list>
+                        </div>
+                    </div>
+                </div>
+                <div class="jumbtron" id="course">
+                    <h1 class="display-4 text-center">Course List</h1>
+                    <hr>
+                    <app-course-list></app-course-list>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

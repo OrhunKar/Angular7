@@ -1,0 +1,20 @@
+<form #form="ngForm" (submit) = "onSubmit(form)" autocomplete="off">
+    <div *ngIf="teacherFormData.TID">
+        <input type="hidden" name="TID" #TID="ngModel" [(ngModel)] = "teacherFormData.TID"  class="form-control">
+    </div>
+    <div class="form-group">
+        <label>TEACHER NAME</label>
+        <input name="Tname" #Tname="ngModel" [(ngModel)] = "teacherFormData.Tname" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>CID</label>
+        <input name="CourseID" #CourseID="ngModel" [(ngModel)] = "teacherFormData.CourseID" class="form-control">
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-lg btn-block">SUBMIT</button>
+    </div>
+</form>
+
+<hr>
+<hr>
+

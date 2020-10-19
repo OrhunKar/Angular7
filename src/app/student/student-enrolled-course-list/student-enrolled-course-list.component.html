@@ -1,0 +1,24 @@
+<h1 class="display-6 text-center">Enrolled Courses</h1>
+<table class="table table-hover">
+    <tr *ngFor ="let course of enrolledCourseList">
+        <dl>
+            <dt>[{{course.CID}}]-{{course.CName}}</dt>
+            <dd>
+                <li>{{course.Contents}}</li>
+            </dd>
+            <dd>
+                <li>
+                    <a href={{course.Link}}>{{course.Link}}</a>
+                </li>
+            </dd>
+            <dd>
+                <li>
+                    {{course.Detail}}
+                </li>
+            </dd>
+        </dl>
+    </tr>
+</table>
+
+
+

@@ -1,0 +1,39 @@
+<h1 class="display-6 text-center">Course Detail</h1>
+<dl>
+    <dt>[{{courseDetail.CID}}]-{{courseDetail.CName}}</dt>
+    <dd>
+        <li>{{courseDetail.Contents}}</li>
+    </dd>
+    <dd>
+        <li>
+            <a href={{courseDetail.Link}}>{{courseDetail.Link}}</a>
+        </li>
+    </dd>
+    <form #form="ngForm" (submit) = "onSubmit(form)" autocomplete="off">
+        <div class="form-group">
+            <td>
+                <input type="hidden" name="CName" #TID="ngModel" [(ngModel)] = "courseDetail.CName"  class="form-control">
+                <input type="hidden" name="CID" #TID="ngModel" [(ngModel)] = "courseDetail.CID"  class="form-control">
+                <input type="hidden" name="Contents" #TID="ngModel" [(ngModel)] = "courseDetail.Contents"  class="form-control">
+                <input type="hidden" name="Detail" #TID="ngModel" [(ngModel)] = "courseDetail.Detail"  class="form-control">
+                <input name="Link" #AID="ngModel" [(ngModel)] = "courseDetail.Link" class="form-control">
+            </td>
+            <td>
+                <button type="submit" class="btn btn-lg btn-block">Share Link</button>
+            </td>
+        </div>
+    </form>
+    <dd>
+        <li>
+            {{courseDetail.Detail}}
+        </li>
+    </dd>
+</dl>
+<h1 class="display-6 text-center">Students Enrolled in Course {{courseDetail.CID}}</h1>
+<table class="table table-hover">
+    <tr *ngFor ="let student of enrolledStudentList">
+        <td>[{{student.Sname}}]</td>
+    </tr>
+</table>
+
+

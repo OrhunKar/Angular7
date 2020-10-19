@@ -1,0 +1,6 @@
+<table class="table table-hover">
+    <tr *ngFor ="let teacher of teacherList">
+        <td (click) = "populateForm(teacher)">[{{teacher.Tname}}]-{{teacher.CourseID}}</td>
+        <td><button (click) = "onDelete(teacher.TID)" class="btn-sm btn-outline-danger">X</button></td>
+    </tr>
+</table>

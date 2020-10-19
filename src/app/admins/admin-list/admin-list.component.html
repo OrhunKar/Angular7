@@ -1,0 +1,6 @@
+<table class="table table-hover">
+    <tr *ngFor ="let admin of adminList">
+        <td (click) = "populateForm(admin)">[{{admin.ANAME}}]-{{admin.INFORMATION}}</td>
+        <td><button (click) = "onDelete(admin.AID)" class="btn-sm btn-outline-danger">X</button></td>
+    </tr>
+</table>

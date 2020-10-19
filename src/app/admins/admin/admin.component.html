@@ -1,0 +1,31 @@
+<form #form="ngForm" (submit) = "onSubmit(form)" autocomplete="off">
+    <div class="form-group">
+        <input type="hidden" name="AID" #AID="ngModel" [(ngModel)] = "formData.AID" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>ADMIN NAME</label>
+        <input name="ANAME" #ANAME="ngModel" [(ngModel)] = "formData.ANAME" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>INFORMATION</label>
+        <input name="INFORMATION" #INFORMATION="ngModel" [(ngModel)] = "formData.INFORMATION" class="form-control">
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>LOGIN NAME</label>
+            <input name="LOGINNAME" #LOGINNAME="ngModel" [(ngModel)] = "formData.LOGINNAME" class="form-control">
+        </div>
+        <div class="form-group col-md-6">
+            <label>LOGIN PASSWORD</label>
+            <input name="LOGINPASSWORD" #LOGINPASSWORD="ngModel" [(ngModel)] = "formData.LOGINPASSWORD" class="form-control">
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-lg btn-block">SUBMIT</button>
+    </div>
+</form>
+
+<hr>
+<hr>
+
+
